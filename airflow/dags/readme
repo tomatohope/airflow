@@ -1,0 +1,3 @@
+ln -s   $dir/bigdata_research/python/airflow/dags /root/airflow/dags/
+ln -s   $dir/bigdata_research/python/airflow/python_file /root/airflow/python_file/
+ln -s   $dir/bigdata_research/python/airflow/Sqlfile /root/airflow/Sqlfile/

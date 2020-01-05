@@ -1,0 +1,15 @@
+set search_path='dev_jing_dw';
+
+CREATE TABLE tablenametablename (
+mid integer ,
+openid varchar,
+calculated_at date,
+create_time integer,
+session_id varchar,
+type varchar,
+session_position integer,
+session_depth integer,
+session_duration integer,
+session_event_max_duration integer,
+session_event_duration integer
+)distributed by(mid,openid);
