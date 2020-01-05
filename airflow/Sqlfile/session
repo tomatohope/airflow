@@ -1,4 +1,4 @@
-set search_path='dev_jing_dw';
+set search_path='dev_test_dw';
 
 insert into tablenametablename
 SELECT
@@ -56,7 +56,7 @@ FROM
         then
           create_time - LAG(create_time) OVER ua > 1800
         end AS new_session
-   FROM dev_jing_dw.user_action_record where created_date = 'created_datecreated_date'
+   FROM dev_test_dw.user_action_record where created_date = 'created_datecreated_date'
    AND wid = 'widwid'
    WINDOW ua AS  (PARTITION BY openid ORDER BY create_time ASC)
   ) AS t_ua
