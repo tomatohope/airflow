@@ -13,7 +13,7 @@ default_args = {
     'owner': 'hope.gong',
     'depends_on_past': False,
     'start_date': datetime(dt.year, dt.month, dt.day, dt.hour, dt.minute),
-    'email': ['helper@jingdigital.com'],
+    'email': ['helper@test.com'],
     'email_on_failure': True,
     'email_on_retry': True,
     'retries': 3,
