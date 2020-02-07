@@ -1,0 +1,2 @@
+set search_path='dev_jing_dw';
+select count(*) from pg_class where relname = 'tablenametablename';
