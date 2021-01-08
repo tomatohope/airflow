@@ -1,4 +1,4 @@
-set search_path='dev_jing_dw';
+set search_path='schemaname';
 
 CREATE TABLE tablenametablename (
 mid integer ,
