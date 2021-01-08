@@ -3,7 +3,7 @@ import os
 import threading
 from connectSqlModule import execsql, log
 
-mid = execsql.conect_execsql('SELECT DISTINCT wid FROM dev_jing_dw.user_action_record', '1')
+mid = execsql.conect_execsql('SELECT DISTINCT wid FROM schemaname.user_action_record', '1')
 log.log('info', "querymid - " + str(mid))
 airflow_home = '/root/airflow'
 
@@ -44,7 +44,7 @@ for i in range(len(mid)):
         ### create table sql
         sql = os.popen("sed -e \"s/tablenametablename/$table_name/g\" $createTablesqlfile").read()
         log.log('info', "createTablesql - " + sql)
-        execsql.conect_execsql(sql, '0') #set search_path='dev_jing_dw'; 在SQL语句中指定schema
+        execsql.conect_execsql(sql, '0') #set search_path='shemaname'; 在SQL语句中指定schema
 
     sql = os.popen("sed -e \"s/created_datecreated_date/$date/g\" $insertSqlfile | sed -e \"s/widwid/$mid/g\" | sed -e \"s/tablenametablename/$table_name/g\"").read()
     log.log('info', "insertSql - " + sql)
